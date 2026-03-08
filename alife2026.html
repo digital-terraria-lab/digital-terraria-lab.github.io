@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Homepage for the ALife 2026 conference workshop Open Research Questions in Sugarscape After 30 Years.">
+<meta name="keywords" content="digital terraria lab, artificial life, artificial intelligence, AI, agent, sugarscape, agent-based model, ABM, computational philosophy, computational social science, simulation, modeling">
+<title>Open Research Questions in Sugarscape After 30 Years</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+
+<body>
+<h1>Open Research Questions in Sugarscape After 30 Years</h1>
+<h2>An <a href="https://2026.alife.org/">ALife 2026</a> Workshop</h2>
+<center>
+<img src="assets/sugarscape.gif" width=85% alt="Animation for a Sugarscape simulation run.">
+</center>
+
+<h2>Workshop Description</h2>
+<p>
+<a href="https://github.com/digital-terraria-lab/sugarscape"><strong>Sugarscape</strong></a> is a robust agent-based model first introduced in 1996 for simulating complex emergent social behaviors.
+Thirty years later, it still remains a useful platform to investigate societal-scale issues.
+Recent topics of investigation include universal basic income, ethical behavior modeling, and societal effects of depression, greed, and tax structures.
+Unlike many agent-based models, Sugarscape is less about the agents themselves and more about the interactions between agents which coalesce into a society.
+One of the more appealing aspects of Sugarscape is how social relationships and structures emerge organically among autonomous agents in response to the environment.
+This reinforces the observation that a reductionist philosophy towards simulation cannot capture the underlying causes that inform agent behavior.
+</p>
+<p>
+In this workshop, we provide a rich survey of Sugarscape through its decades of use.This includes the context in which Sugarscape was first devised, its evolution over time, and future directions.
+We demonstrate how Sugarscape can serve as a central hub for cross-disciplinary collaboration to address these open questions.
+We seek to create a research community that leverages Sugarscape to grapple with especially compelling open problems for early and mid-career researchers.
+</p>
+<p>
+The format of the workshop will be a mix of presentation and collaborative, birds-of-a-feather discussion.
+We invite participants to suggest new problems and forge research partnerships that persist beyond ALife 2026.
+Although this is not a tutorial, we will provide a brief overview of our implementation of the Sugarscape model which is a free and open source project available for download.
+</p>
+
+<h2>Workshop Logistics</h2>
+<ul>
+<li>Location: TBD</li>
+<li>Date: 2026-08-XX</li>
+<li>Time: XX:XX - YY:YY</li>
+</ul>
+
+<h2>Conference Logistics</h2>
+<ul>
+<li><a href="https://2026.alife.org/">Conference Registration</a> (Registration Link Coming Soon)</li>
+<li><a href="https://ammcs.wlu.ca/2026/venue-accommodation/">Conference Accommodations</a></li>
+</ul>
+
+<h2>Hosts</h2>
+<p>
+<a href="https://orcid.org/0000-0002-0872-2863">Ankur Gupta</a> (<a href="https://butler.edu">Butler University</a>)<br/>
+<a href="https://scholar.google.com/citations?user=bzAkvogAAAAJ&hl=en">Nate Kremer-Herman</a> (<a href="https://seattleu.edu">Seattle University</a>) - <a href="index.html">Digital Terraria Lab</a>
+</p>
+
+<div class="footer">
+<center>
+<a href="index.html"><strong>Digital Terraria Lab Homepage</strong></a><br/>
+<small>
+This website is marked <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>.<br/>
+<img id="cc0" src="assets/cc0.png" width=20% alt="CC0 Logo."> <img id="notbyai" src="assets/notbyai.png" width="20%" alt="Website not written by AI.">
+</small><br/>
+<button id="modeswitch" onclick="colorswitch()"><strong>🌞 Switch to Light Mode</strong></div>
+</center>
+</div>
+
+<script>
+const root = document.documentElement;
+const cc0 = document.getElementById("cc0");
+const modeswitch = document.getElementById("modeswitch")
+const notbyai = document.getElementById("notbyai");
+var mode = "dark";
+
+if(window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) { colorswitch(); }
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", event => { colorswitch(); });
+
+function colorswitch() {
+    root.classList.toggle("lightmode");
+    if(mode == "dark") {
+        modeswitch.innerHTML = "<strong>Switch to Dark Mode 🌛</strong>";
+        mode = "light";
+        cc0.src = "assets/cc0-light.png";
+        notbyai.src = "assets/notbyai-light.png";
+    }
+    else {
+        modeswitch.innerHTML = "<strong>🌞 Switch to Light Mode</strong>";
+        mode = "dark";
+        cc0.src = "assets/cc0.png";
+        notbyai.src = "assets/notbyai.png";
+    }
+}
+</script>
+</body>
+</html>

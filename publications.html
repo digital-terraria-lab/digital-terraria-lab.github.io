@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Publications listing for the Digital Terraria Lab.">
+<meta name="keywords" content="digital terraria lab, artificial life, artificial intelligence, AI, agent, sugarscape, agent-based model, ABM, H*land, Prisoner's Dilemma, computational philosophy, computational social science, simulation, modeling">
+<title>Digital Terraria Lab</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+
+<body>
+<h1>Digital Terraria Lab Simulations for Artificial Life and Machine Ethics</h1>
+
+<h2>Publications</h2>
+<ol>
+<h3>2025</h3>
+<li><a href="assets/papers/kremer-herman:2025:moral-reasoning-conflict.pdf">A Case for Embedding Moral Reasoning in Artificial Agents Engaged in Conflict</a> (<a href="https://attend.ieee.org/istas-2025/">IEEE ISTAS 2025</a>)</li>
+<li><a href="assets/papers/kremer-herman:2025:dynamic-greed.pdf">Dynamic Greed in Artificial Moral Agents</a> (<a href="https://attend.ieee.org/istas-2025/">IEEE ISTAS 2025</a>)</li>
+<li><a href="assets/papers/milkowski:2025:little-bit-ubi.pdf">A Little Bit Goes a Long Way: Modeling Universal Basic Income for Noncooperative Artificial Agents</a> (<a href="https://attend.ieee.org/ethics-2025/">IEEE ETHICS 2025</a>)</li>
+<h3>2024</h3>
+<li><a href="assets/papers/kremer-herman:2024:blueprints-for-machine-ethics.pdf">Blueprint for Machine Ethics: A Digital Terrarium for Socio-Ethical Artificial Agent Decisionmaking</a> (<a href="https://ieeexplore.ieee.org/document/10804777">IEEE Access</a>)</li>
+<li><a href="assets/papers/kremer-herman:2024:need-for-greed.pdf">The Need for Greed in Artificial Decisionmakers</a> (<a href="https://attend.ieee.org/istas-2024/">IEEE ISTAS 2024</a>)</li>
+<h3>2023</h3>
+<li><a href="assets/papers/kremer-herman:2023:replacing-sugarscape.pdf">Replacing Sugarscape: A Comprehensive, Expansive, and Transparent Reimplementation</a> (<a href="https://simutools.eai-conferences.org/2023/">EAI SIMUTools 2023</a>)</li>
+</ol>
+
+<div class="footer">
+<center>
+<a href="index.html"><strong>Digital Terraria Lab Homepage</strong></a><br/>
+<small>
+This website is marked <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>.<br/>
+<img id="cc0" src="assets/cc0.png" width=20% alt="CC0 Logo."> <img id="notbyai" src="assets/notbyai.png" width="20%" alt="Website not written by AI.">
+</small><br/>
+<button id="modeswitch" onclick="colorswitch()"><strong>🌞 Switch to Light Mode</strong></div>
+</center>
+</div>
+
+<script>
+const root = document.documentElement;
+const cc0 = document.getElementById("cc0");
+const modeswitch = document.getElementById("modeswitch")
+const notbyai = document.getElementById("notbyai");
+var mode = "dark";
+
+if(window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) { colorswitch(); }
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", event => { colorswitch(); });
+
+function colorswitch() {
+    root.classList.toggle("lightmode");
+    if(mode == "dark") {
+        modeswitch.innerHTML = "<strong>Switch to Dark Mode 🌛</strong>";
+        mode = "light";
+        cc0.src = "assets/cc0-light.png";
+        notbyai.src = "assets/notbyai-light.png";
+    }
+    else {
+        modeswitch.innerHTML = "<strong>🌞 Switch to Light Mode</strong>";
+        mode = "dark";
+        cc0.src = "assets/cc0.png";
+        notbyai.src = "assets/notbyai.png";
+    }
+}
+</script>
+</body>
+</html>
