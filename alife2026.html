@@ -18,7 +18,7 @@
 <img src="assets/sugarscape.gif" width=85% alt="Animation for a Sugarscape simulation run.">
 <p>
 <a href="https://www.technologyandsociety.org"><img src="assets/ieee-ssit-logo.png" width=40% alt="IEEE Society on Social Implications of Technology"></a>
-<a href="https://www.alife.org"><img src="assets/isal-logo.png" width=40% alt="International Society for Artificial Life"></a>
+<a href="https://www.alife.org"><img id="isal" src="assets/isal-logo.png" width=40% alt="International Society for Artificial Life"></a>
 </p>
 </center>
 
@@ -80,6 +80,7 @@ This website is marked <a href="https://creativecommons.org/publicdomain/zero/1.
 <script>
 const root = document.documentElement;
 const cc0 = document.getElementById("cc0");
+const isal = document.getElementById("isal");
 const modeswitch = document.getElementById("modeswitch")
 const notbyai = document.getElementById("notbyai");
 var mode = "dark";
@@ -93,12 +94,14 @@ function colorswitch() {
         modeswitch.innerHTML = "<strong>Switch to Dark Mode 🌛</strong>";
         mode = "light";
         cc0.src = "assets/cc0-light.png";
+        isal.src = "assets/isal-logo-light.png";
         notbyai.src = "assets/notbyai-light.png";
     }
     else {
         modeswitch.innerHTML = "<strong>🌞 Switch to Light Mode</strong>";
         mode = "dark";
         cc0.src = "assets/cc0.png";
+        isal.src = "assets/isal-logo.png";
         notbyai.src = "assets/notbyai.png";
     }
 }
